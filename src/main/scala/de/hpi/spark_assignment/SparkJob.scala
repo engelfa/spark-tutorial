@@ -1,4 +1,4 @@
-package de.hpi.spark_tutorial
+package de.hpi.spark_assignment
 
 import org.apache.spark.sql.{Dataset, Encoder, SparkSession}
 import org.apache.spark.ml.Pipeline
@@ -17,7 +17,7 @@ class Pet(var name:String, var age:Int) {
   override def toString = s"Pet(name=$name, age=$age)"
 }
 
-object SimpleSpark extends App {
+object SparkJob extends App {
 
   override def main(args: Array[String]): Unit = {
 
@@ -60,7 +60,7 @@ object SimpleSpark extends App {
     // Create a SparkSession to work with Spark
     val sparkBuilder = SparkSession
       .builder()
-      .appName("SparkTutorial")
+      .appName("SparkAssignment")
       .master("local[4]") // local, with 4 worker cores
     val spark = sparkBuilder.getOrCreate()
 
